@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welocme to django model</h1>
+    <ol>
+      <li>Object relational model (ORM)</li>
+      <li>Creating model class</li>
+      <li>Migrations</li>
+      <ol>
+        <li>python manage.py makemigrations</li>
+        <li>python manage.py showmigrations</li>
+        <li>python manage.py migrate</li>
+        <li>python manage.py sqlmigrate main 0001</li>
+      </ol>
+      <li>__str__ method</li>
+      <li>Create super user</li>
+      <ol>
+        <li>python manage.py createsuperuser</li>
+      </ol>
+      <li>Register model</li>
+      <ol>
+        <li>Using model class name</li>
+        <li>Using ModelAdmin</li>
+      </ol>
+      <li>Show or retrieve database table data</li>
+    </ol>
+
+    <hr />
+    <h1>Displaying data</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Registration number</th>
+        <th>CGPA</th>
+      </tr>
+
+      {% for dt in data %}
+      <tr>
+        <td>{{dt.id}}</td>
+        <td>{{dt.name}}</td>
+        <td>{{dt.reg_no}}</td>
+        <td>{{dt.cgpa}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
