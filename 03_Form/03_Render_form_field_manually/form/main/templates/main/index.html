@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rendering form field manually</h1>
+
+    <a href="https://www.geeksforgeeks.org/render-django-form-fields-manually/"  target="_blank" >Reference1</a> <br>
+    <a href="https://simpleisbetterthancomplex.com/article/2017/08/19/how-to-render-django-form-manually.html"  target="_blank">Reference2</a>
+
+    {{form.as_p}}
+
+    <hr>
+
+    {{form.name.label}}
+    <hr>
+    {{form.name.label_tag}}
+    <hr>
+    {{form.name}}
+    <hr>
+    {{form.name.value}}
+    <hr>
+    {{form.name.id_for_label}}
+    <hr>
+    {{form.name.html_name}}
+    <hr>
+    {{form.reg.help_text}}
+    <hr>
+    {{form.name.field.required}}
+    <hr>
+    {% for error in form.reg.errors %}
+    {{error}}
+    {% endfor %}
+    <hr>
+
+
+    
+
+    
+</body>
+</html>
