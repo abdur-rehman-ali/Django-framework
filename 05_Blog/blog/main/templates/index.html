@@ -4,7 +4,9 @@
 <ul>
   {% for post in object_list %}
   <li>
-    {{post.id}}) {{post.title}} -By: {{post.author.first_name}}
+    <a href=" {% url 'postDetail' post.id %} ">
+        {{post.title}} -By: {{post.author.first_name}}
+    </a>
     <br />
     {{post.description}}
   </li>
