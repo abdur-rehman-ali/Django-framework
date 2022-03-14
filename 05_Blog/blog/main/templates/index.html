@@ -11,7 +11,7 @@
     {{post.description}}
     <br>
     <small>( <a href=" {% url 'postUpdate' post.id %} ">Edit</a> )</small>
-    <small>( <a href="">Delete</a> )</small>
+    <small>( <a href=" {% url 'postDelete' post.id %} ">Delete</a> )</small>
   </li>
   <br /><br />
   {% endfor %}
