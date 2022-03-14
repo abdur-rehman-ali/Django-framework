@@ -1,7 +1,11 @@
-{% extends 'base.html' %} {% block title %} {{object.title}} {% endblock title %} {% block body %}
-<h1>{{object.title}}</h1>
-<p>{{object.description}}</p>
-<h5>Author : {{object.author}}</h5>
+{% extends 'base.html' %} {% block title %} update {% endblock title %} {% block body %}
+
+<h1>Update post</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-secondary" value="Update">
+</form>
 
 <a href=" {% url 'index' %} "> Back</a>
 
