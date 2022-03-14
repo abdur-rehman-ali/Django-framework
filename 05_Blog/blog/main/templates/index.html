@@ -1,8 +1,14 @@
-{% extends 'base.html' %}
-{% block title %}
-index
-{% endblock title %}
-
+{% extends 'base.html' %} {% block title %} index {% endblock title %} 
 {% block body %}
-<h1>Hello world</h1>
+<h1>Blog posts</h1>
+<ul>
+  {% for post in object_list %}
+  <li>
+    {{post.title}} -By: {{post.author.first_name}}
+    <br />
+    {{post.description}}
+  </li>
+  <br /><br />
+  {% endfor %}
+</ul>
 {% endblock body %}
