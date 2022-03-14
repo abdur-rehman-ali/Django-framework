@@ -7,3 +7,4 @@ from .models import Post
 class index(ListView):
     model = Post
     template_name = 'index.html'
+    ordering = ['-id']
